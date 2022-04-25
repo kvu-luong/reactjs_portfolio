@@ -1,3 +1,26 @@
+# Start
+```
+git clone --single-branch --branch Starter-code-files https://github.com/codebucks27/Agency-website.git
+```
+
+Tutorial: https://www.youtube.com/watch?v=aAEfBxcGpJ8&t=12018s 
+
+# Note
+- Structure:
+    Page -> section -> component
+- Style component: 
+    + Using global style: https://styled-components.com/docs/api
+- Lazy loading component:
+    Help to render component only when user use this component
+    + https://reactjs.org/docs/code-splitting.html
+- Handle header in component header: 
+    + add style component with 'styled'
+    + border bottom animation of nav
+    + hover and focus( focus happen when click on this element)
+    + hamburger menu: need a cover div to make cursor pointer work properly
+    + transition
+    + mobile menu
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
