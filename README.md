@@ -20,6 +20,8 @@ Tutorial: https://www.youtube.com/watch?v=aAEfBxcGpJ8&t=12018s
     + hamburger menu: need a cover div to make cursor pointer work properly
     + transition
     + mobile menu
+- Handle Hero Section
+    + keyframs of style component
 
 # Getting Started with Create React App
 
