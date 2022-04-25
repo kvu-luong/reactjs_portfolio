@@ -6,8 +6,8 @@ import logo from "../../assets/logo.svg";
 const Headers = styled.header`
   display: flex;
   justify-content: space-between;
-  align-item: center;
-  padding: 1rem 5rem;
+  align-items: center;
+  padding: 5px 5rem 5px 5rem;
   background-color: var(--nav);
   color: var(--white);
   position: relative;
@@ -16,7 +16,7 @@ const Headers = styled.header`
 
 const Logo = styled.a`
   display: flex;
-  align-item: center;
+  align-items: center;
   width: 2rem;
   height: auto;
   cursor: pointer;
@@ -79,19 +79,18 @@ const Button = styled.button`
 `;
 
 const HamburgerWrap = styled.div`
-  display: block;
+  display: none;
+
+  @media only Screen and (max-width: 48em) {
+    display: block;
+  }
   width: 2rem;
-  height: fit-content;
+  height: 2rem;
   cursor: pointer;
 `;
 
 const HamburgerBtn = styled.span`
-  display: none;
-
-  @media only Screen and (max-width: 48em) {
-    display: inline-block;
-  }
-
+  display: block;
   position: relative;
   background-color: ${(props) =>
     props.clicked ? "transparent" : "var(--white)"};
