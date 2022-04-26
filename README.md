@@ -102,6 +102,23 @@ Tutorial: https://www.youtube.com/watch?v=aAEfBxcGpJ8&t=12018s
       }
   }
   ```
+- Hanle scroll to top
+    + Simple with method scrollIntoview: [Detail](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView)
+    ```
+    const scrollUp = () => {
+        const element = document.getElementById('home');
+        element.scrollIntoView({
+        behavior: "smooth",
+        block: "end",
+        inline: "nearest"
+        })
+    }
+    return (
+        <Up onClick={scrollUp}>
+        <img src={SvgIcon} alt="to top" />
+        </Up>
+    );
+    ```
 
 # Getting Started with Create React App
 
