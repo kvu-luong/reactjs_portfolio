@@ -6,7 +6,7 @@ export const move = keyframes`
     100% { transform: translateY(-5px)         }
 `;
 
-export const AboutSection = styled.div`
+export const AboutSection = styled.section`
   width: 100vw;
   position: relative;
   display: flex;
