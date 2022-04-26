@@ -21,7 +21,11 @@ Tutorial: https://www.youtube.com/watch?v=aAEfBxcGpJ8&t=12018s
     + transition
     + mobile menu
 - Handle Hero Section
-    + keyframs of style component
+    + keyframs of style component: up and down
+- Handle About Section
+    + create file svg wave: https://getwaves.io/
+    + import and export style in seperate file
+    + CurvedLine css
 
 # Getting Started with Create React App
 

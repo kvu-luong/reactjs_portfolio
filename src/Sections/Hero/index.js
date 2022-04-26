@@ -1,11 +1,12 @@
 // This is HeroSection component, Main top section of website
+
 import styled, { keyframes } from "styled-components";
+
 import pinkBlob from "../../assets/blobPink.png";
 import purpleBlob from "../../assets/blob purple.png";
 import whiteBlob from "../../assets/blob white.png";
 import arrow from "../../assets/Arrow Right.svg";
 import Mobile from "../../assets/mobile.svg";
-
 
 const move = keyframes`
 0% { transform: translateY(-5px)  }
@@ -13,14 +14,21 @@ const move = keyframes`
     100% { transform: translateY(-5px) }
 `;
 
-const Hero = styled.div`
+const HomeSection = styled.section`
   width: 100vw;
   height: 45vw;
-  background-color: var(--black);
-
+  background-color: #0a0b10;
   display: flex;
   justify-content: center;
   position: relative;
+  @media only Screen and (max-width: 48em) {
+    height: 70vw;
+    display: block;
+  }
+  @media only Screen and (max-width: 420px) {
+    height: auto;
+    padding-bottom: 2rem;
+  }
 `;
 
 const Blobs = styled.div`
@@ -39,13 +47,11 @@ const PinkBlob = styled.div`
   top: calc(5rem + 5vw);
   z-index: 6;
 `;
-
 const PurpleBlob = styled.div`
   width: calc(10% + 10vw);
   position: absolute;
   right: 0;
 `;
-
 const WhiteBlob = styled.div`
   width: calc(20% + 20vw);
   position: absolute;
@@ -59,6 +65,28 @@ const MainContent = styled.div`
   justify-content: center;
   align-items: center;
   width: 70vw;
+  @media only Screen and (max-width: 48em) {
+    flex-direction: column;
+    width: 100vw;
+  }
+`;
+
+const MobileSvg = styled.img`
+  max-width: 100%;
+  width: calc(30% + 20vw);
+  height: auto;
+  z-index: 7;
+  animation: ${move} 2.5s ease infinite;
+  @media only Screen and (max-width: 48em) {
+    align-self: flex-start;
+    position: absolute;
+    bottom: 0;
+    width: calc(30% + 20vw);
+    opacity: 0.5;
+  }
+  @media only Screen and (max-width: 40em) {
+    display: none;
+  }
 `;
 
 const Lb = styled.div`
@@ -141,27 +169,9 @@ const CTA = styled.button`
   }
 `;
 
-const MobileSvg = styled.img`
-  max-width: 100%;
-  width: calc(30% + 20vw);
-  height: auto;
-  z-index: 7;
-  animation: ${move} 2.5s ease infinite;
-  @media only Screen and (max-width: 48em) {
-    align-self: flex-start;
-    position: absolute;
-    bottom: 0;
-    width: calc(30% + 20vw);
-    opacity: 0.5;
-  }
-  @media only Screen and (max-width: 40em) {
-    display: none;
-  }
-`;
-
 const HeroSection = () => {
   return (
-    <Hero>
+    <HomeSection id="home">
       <Blobs>
         <PinkBlob>
           <img src={pinkBlob} alt="" width="400" height="400" />{" "}
@@ -173,6 +183,7 @@ const HeroSection = () => {
           <img src={purpleBlob} alt="" width="400" height="400" />
         </PurpleBlob>
       </Blobs>
+
       <MainContent id="home">
         <Lb id="leftBlock">
           <Topic>
@@ -188,6 +199,7 @@ const HeroSection = () => {
             <img src={arrow} alt="cta" width="100" height="100" />
           </CTA>
         </Lb>
+
         <MobileSvg
           src={Mobile}
           alt="Mobile Svg"
@@ -196,7 +208,7 @@ const HeroSection = () => {
           height="400"
         />
       </MainContent>
-    </Hero>
+    </HomeSection>
   );
 };
 
