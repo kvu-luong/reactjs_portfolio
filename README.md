@@ -1,85 +1,107 @@
 # Start
+
 ```
 git clone --single-branch --branch Starter-code-files https://github.com/codebucks27/Agency-website.git
 ```
 
-Tutorial: https://www.youtube.com/watch?v=aAEfBxcGpJ8&t=12018s 
+Tutorial: https://www.youtube.com/watch?v=aAEfBxcGpJ8&t=12018s
 
 # Note
+
 - Structure:
-    Page -> section -> component
-- Style component: 
-    + Using global style: https://styled-components.com/docs/api
+  Page -> section -> component
+- Style component:
+  - Using global style: https://styled-components.com/docs/api
 - Lazy loading component:
-    Help to render component only when user use this component
-    + https://reactjs.org/docs/code-splitting.html
-- Handle header in component header: 
-    + add style component with 'styled'
-    + border bottom animation of nav
-    + hover and focus( focus happen when click on this element)
-    + hamburger menu: need a cover div to make cursor pointer work properly
-    + transition
-    + mobile menu
+  Help to render component only when user use this component
+  - https://reactjs.org/docs/code-splitting.html
+- Handle header in component header:
+  - add style component with 'styled'
+  - border bottom animation of nav
+  - hover and focus( focus happen when click on this element)
+  - hamburger menu: need a cover div to make cursor pointer work properly
+  - transition
+  - mobile menu
 - Handle Hero Section
-    + keyframs of style component: up and down
-    + hover mix active css: active happen only when click, when release it not apply. But focus will keep apply to this element
-        ```
-            &:hover {
-                transform: scale(1.1);
-            }
-            &:active {
-                transform: scale(0.9);
-            }
-        ```
-        example:
 
-        ```
-            button { font-weight: normal; color: black; }
-            button:focus { color: red; }
-            button:active { font-weight: bold; }
-            </style>
-            
-            <button>
-            When clicked, my text turns red AND bold!<br />
-            But not when focused only,<br />
-            where my text just turns red
-            </button>
-        ```
+  - keyframs of style component: up and down
+  - hover mix active css: active happen only when click, when release it not apply. But focus will keep apply to this element
+
+    ```
+        &:hover {
+            transform: scale(1.1);
+        }
+        &:active {
+            transform: scale(0.9);
+        }
+    ```
+
+    example:
+
+    ```
+        button { font-weight: normal; color: black; }
+        button:focus { color: red; }
+        button:active { font-weight: bold; }
+        </style>
+
+        <button>
+        When clicked, my text turns red AND bold!<br />
+        But not when focused only,<br />
+        where my text just turns red
+        </button>
+    ```
+
 - Handle About Section
-    + create file svg wave: https://getwaves.io/
-    + import and export style in seperate file
-    + CurvedLine css
+  - create file svg wave: https://getwaves.io/
+  - import and export style in seperate file
+  - CurvedLine css
 - Handle Service Section
-    + css centering text border
-        ```
-        export const Title = styled.h1`
-            display: inline-block;
-            font-size: 2rem;
-            mrgin-top: 1rem;
-            position: relative;
 
-            &::before{
-                content: "";
-                height: 1px;
-                border-bottom: 2px solid var(--pink);
-                width: 50%;
-                position: absolute;
-                left: 50%;
-                bottom: 0;
-                transform: translate(-50%);
-            }
+  - css centering text border
+
+    ```
+    export const Title = styled.h1`
+        display: inline-block;
+        font-size: 2rem;
+        mrgin-top: 1rem;
+        position: relative;
+
+        &::before{
+            content: "";
+            height: 1px;
+            border-bottom: 2px solid var(--pink);
+            width: 50%;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%);
+        }
+    `;
+    ```
+
+  - css triangle
+    ```
+        export const Triangle = styled.span`
+            border-left: 1.2rem  solid transparent;
+            border-right: 1.2rem solid transparent;
+            border-top: 2rem solid var(--background);
         `;
-        ```
-    + css triangle
-        ```
-            export const Triangle = styled.span`
-                border-left: 1.2rem  solid transparent;
-                border-right: 1.2rem solid transparent;
-                border-top: 2rem solid var(--background);
-            `;
-        ```
+    ```
+
 - Handle Testimonial
-    + Using react lick: https://react-slick.neostack.com/ , add slick css and custom css of slick;
+  - Using react lick: https://react-slick.neostack.com/ , add slick css and custom css of slick;
+- Hanle Contact
+  - Change background color of image:
+  ```
+  a {
+  &:hover {
+      img {
+          filter: invert(20%) sepia(100%) saturate(500%) hue-rotate(580deg)
+          brightness(100%) contrast(97%);
+      }
+      }
+  }
+  ```
 
 # Getting Started with Create React App
 
