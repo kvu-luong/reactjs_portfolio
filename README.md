@@ -120,6 +120,34 @@ Tutorial: https://www.youtube.com/watch?v=aAEfBxcGpJ8&t=12018s
     );
     ```
 
+## Advance
+- Header animate with [GSAP](https://greensock.com/)
+    + responsive animate 
+    ```
+        const element = ref.current;
+        const mq = window.matchMedia("(max-width: 40em)");
+        // console.log("mq", mq);
+        if (mq.matches) {
+    ```
+
+    Refer to current element & register gsap
+    ```
+        const ref = useRef(null);
+        gsap.registerPlugin(ScrollTrigger);
+
+        <Headers ref={ref}>
+    ```
+    + use function in reactjs, in function or class
+     ```
+        const handleClick = (id, e) => {
+            setClick(!click);
+            scrollUp(id, e);
+        };
+
+        <a href="#home" onClick={(e) => handleClick("home", e)}>
+          HOME
+        </a>
+     ```
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

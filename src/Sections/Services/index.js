@@ -16,7 +16,7 @@ import Capsule from "../../assets/3dcapsule.png";
 
 const Services = () => {
   return (
-    <ServiceSection id="service">
+    <ServiceSection id="services">
       <Background>
         <Title>What We Do</Title>
         <Line />

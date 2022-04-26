@@ -20,9 +20,6 @@ const Rb = styled.div`
 
 const SvgBlock = ({ svg }) => {
   const SvgIcon = require(`../../assets/${svg}`).default;
-  console.log(SvgIcon);
-  console.log(require(`../../assets/${svg}`));
-  //console.log(SvgIcon);
   return (
     <Rb id="svgBlock">
       <img src={SvgIcon} alt="Services" />
