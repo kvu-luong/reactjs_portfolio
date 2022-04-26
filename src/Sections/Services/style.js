@@ -20,7 +20,7 @@ export const Background = styled.div`
   left: 0;
   bottom: 0;
   width: 100vw;
-  height: 100%;
+  height: 85vh;
   z-index: -1;
   background-color: #0a0b10;
   background-size: auto 100vh;
@@ -87,14 +87,15 @@ export const Content = styled.div`
 `;
 
 export const OBJ = styled.div`
- position: absolute;
- top: 80%;
- right: 35%;
- width: 20vw;
- display: flex;
- justify-content: center;
-
- @media only screen and (max-width: 48em){
-     opacity: 0.5;
- }
+  position: absolute;
+  top: 80%;
+  right: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+  /* z-index: 1; */
+  @media only Screen and (max-width: 48em) {
+    opacity: 0.5;
+  }
 `;

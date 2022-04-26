@@ -148,6 +148,8 @@ Tutorial: https://www.youtube.com/watch?v=aAEfBxcGpJ8&t=12018s
           HOME
         </a>
      ```
+- Handle animation Service section
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
